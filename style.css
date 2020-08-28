@@ -1,0 +1,132 @@
+.grid-area {
+    padding: 1em 1em 1em 1em;
+/* Padding is the space between its content and its border */
+    background-color: #ccccff;
+/* Background-color property sets the background color of an element */
+}
+
+.resume {
+    display : grid;
+/* Defines the element as a grid container and establishes a new grid farmatting context for its contents */
+    grid-template-columns: 1fr 3fr ;
+/* Defines the columns of the grid with a space-separated list of values, those values keep represents the size of each column */
+    grid-template-areas:
+/* Defines a grid template by referencing the names of the grid areas, the syntax itself provides a visualization of the structure of the grid */
+      "photo name"
+      "about education"
+      "about work";
+}
+
+/* Display for devices with max width less than 600px */
+@media (max-width: 600px) {
+  .resume {
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name photo"    
+      "about education"
+      "about work";
+  }
+
+}
+
+/* Display for phone devices with max width less than 400px */
+@media (max-width: 400px) {
+  .resume {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "photo"
+      "about"
+      "work"
+      "education";
+  }
+}
+
+.name {
+    grid-area: name;
+}
+
+.photo {
+    grid-area: photo;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+/* Modified text color on visited, active and hover links */
+a:link {
+  color:#2b0000 ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #0e0000;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #2962FF;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #15003d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.about {
+    grid-area: about;
+    text-align: center;
+}
+
+.work {
+    grid-area: work ;
+}
+
+.education {
+    grid-area: education;
+}
+
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: #001433;
+  text-align: center;
+  font-size: 30px;
+  
+  
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #001433;
+  text-align: center;
+}
+
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #001433;
+  font-size: 25px;
+}
+
+p1 { 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+p2 { 
+     font-family: "Times New Roman", Times, serif;
+     font-size: 15px;
+
+}
+
+p3 {
+       font-family: "Times New Roman", Times, serif;
+       font-size: 15px;
+  
+}
