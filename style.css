@@ -10,6 +10,8 @@
 /* Defines the element as a grid container and establishes a new grid farmatting context for its contents */
     grid-template-columns: 1fr 3fr ;
 /* Defines the columns of the grid with a space-separated list of values, those values keep represents the size of each column */
+    width: 80%;
+    margin: auto;
     grid-template-areas:
 /* Defines a grid template by referencing the names of the grid areas, the syntax itself provides a visualization of the structure of the grid */
       "photo name"
